@@ -46,7 +46,9 @@ new_df <- data.frame(
 anova <- aov(data ~ district, data = new_df)
 print(summary(anova))
 
-
+#Tukey HSD
+hsd_result <- TukeyHSD(anova)
+print(hsd_result)
 
 
 
@@ -68,5 +70,6 @@ for (i in seq_along(post_loop)) {
   
   #Print the district name
   #print(paste("District:", post_data$district[1]))
+
 
 }
