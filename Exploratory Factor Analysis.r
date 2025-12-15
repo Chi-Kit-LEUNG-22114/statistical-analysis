@@ -24,5 +24,6 @@ eigenvalues <- eigen((cor(re_org)))$values
 #rint(eigenvalues)
 
 
-efa_result <- fa(r = re_org, nfactors = 7)
+efa_result <- fa(r = re_org, nfactors = 7, rotate = "oblimin", fm = "ml"))
+
 print(efa_result)
